@@ -1,5 +1,5 @@
 (ns m.mains
-  (:use [clojure.test]))
+   (:use [clojure.test]))
 
 
 (defn testf [text]
@@ -13,3 +13,8 @@
 (defn getv-by-text [t]
   (let [t (testf t)])
     (getv t))
+
+(defn for-sample [m]
+  (let [result (for [k m] 
+                 {:x k}  )]
+    result))
